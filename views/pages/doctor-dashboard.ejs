@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+  <body>
+    <%- include('../partials/navbar'); %>
+
+    <h1 class="text-center mt-3">Welcome, Dr. John</h1>
+    <h4 class="text-center">
+      This is your dashboard. You can view messages, clear all of them (soon one
+      by one), and manage your appointments and time.
+    </h4>
+
+    <div class="messages mt-4 pe-4">
+      <h2 class="text-center pt-1">Messages</h2>
+      <ul>
+        <% messages.forEach(message => { %>
+        <li>
+          <div class="card p-2 m-auto position-relative pe-2">
+            <div class="card-body pb-5">
+              <h3><%= message.name %> messaged:</h3>
+
+              <h2><%= message.textMessage %></h2>
+
+              <button class="clearmessage" type="submit">
+                Clear message <i class="fa-solid fa-x"></i>
+              </button>
+            </div>
+          </div>
+        </li>
+        <% }) %>
+        <br />
+
+        <form action="/doctor-dashboard" method="POST">
+          <div class="text-center">
+            <button class="clearmessages" type="submit">
+              Clear all messages
+            </button>
+          </div>
+        </form>
+      </ul>
+    </div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+    <div class="footer"><%- include('../partials/footer'); %></div>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<div class="footer">
+  <footer>
+    <div class="open-hours left-div-footer">
+      <h4><span class="days">Open hours:</span></h4>
+      <br />
+      <p>
+        <span class="days">Monday - Friday:</span><br />9am - 9pm<br />
+        <span class="days">Saturday - Sunday:</span><br />
+        9am - 4pm
+      </p>
+    </div>
+
+    <div class="telephone right-div-footer">
+      <h5>
+        Contact us on: <br />
+        <br /><i class="fa-solid fa-phone"></i> 00-0000000 <br />or<br />
+        <a class="message-href" href="/contact-us">
+          <i class="fa-solid fa-envelope"></i> Send us a message
+        </a>
+      </h5>
+    </div>
+  </footer>
+</div>
+
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+  crossorigin="anonymous"
+></script>
+
+<script>
+  $(document).ready(function () {
+    $(".smooth-scroll").on("click", function (event) {
+      if (this.hash !== "") {
+        event.preventDefault()
+
+        var hash = this.hash
+
+        $("html, body").animate(
+          {
+            scrollTop: $(hash).offset().top,
+          },
+          800,
+          function () {
+            window.location.hash = hash
+          }
+        )
+      }
+    })
+  })
+</script>

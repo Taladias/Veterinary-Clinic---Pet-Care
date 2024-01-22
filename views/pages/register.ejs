@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+  <body>
+    <%- include('../partials/navbar'); %>
+    <div class="register-container">
+      <br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <div class="res-in-container text-center">
+        <form action="/register" method="POST">
+          <h1>Register</h1>
+          <div class="input-box">
+            <label for="name"></label>
+            <input
+              type="text"
+              name="username"
+              ,
+              id="username"
+              required
+              placeholder="Username"
+            />
+            <i class="bx bxs-user"></i>
+          </div>
+          <div class="input-box">
+            <label for="password"></label>
+            <input
+              type="password"
+              name="password"
+              ,
+              id="password"
+              required
+              placeholder="Password"
+            />
+            <i class="bx bxs-lock-alt"></i>
+          </div>
+          <div class="input-box">
+            <label for="password"></label>
+            <input
+              type="password"
+              name="password2"
+              ,
+              id="password2"
+              required
+              placeholder="Retype password"
+            />
+            <i class="bx bxs-lock-alt"></i>
+          </div>
+          <button type="submit" class="btn-login">Register</button>
+        </form>
+      </div>
+    </div>
+
+    <%- include('../partials/footer'); %>
+  </body>
+</html>

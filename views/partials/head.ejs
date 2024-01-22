@@ -1,0 +1,286 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title><%= title %></title>
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+  crossorigin="anonymous"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<link
+  href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+  rel="stylesheet"
+/>
+
+<style>
+  h1 {
+    font-weight: bold;
+  }
+  .footer {
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: rgb(228, 228, 228);
+    border-top: 1px solid black;
+    margin-top: -50px;
+    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .custom-navbar {
+    background-color: rgb(228, 228, 228);
+    border-bottom: 1px solid black;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .custom-title-font {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+  }
+
+  .carousel-images {
+    max-width: 900px;
+    height: 600px;
+    object-fit: cover;
+  }
+
+  .register-container {
+    padding-bottom: 200px;
+    min-height: 50vh;
+  }
+  .carousel-width {
+    max-width: 900px;
+    height: 600px;
+    object-fit: cover;
+  }
+
+  .customize-image-text {
+    background-color: rgba(200, 200, 200, 0.8);
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 10px 10px;
+    padding-top: 1px;
+    padding-bottom: 3px;
+    color: black;
+  }
+
+  .messages {
+    border: 1px solid#2c3e50;
+    background-color: rgba(128, 128, 128, 0.323);
+    max-width: 50em;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .clearmessage {
+    background-color: rgba(0, 0, 255, 0.341);
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+    margin-left: 20px;
+  }
+  .clearmessages {
+    background-color: rgba(0, 0, 255, 0.341);
+    font-weight: bold;
+    margin-right: 30px;
+  }
+
+  .days {
+    font-weight: bold;
+  }
+
+  .right-div-footer {
+    height: 10%;
+  }
+
+  .left-div-footer,
+  .right-div-footer {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 20%;
+    padding: 5px;
+    margin: 2px;
+    vertical-align: middle;
+  }
+
+  .news-articles {
+    padding-bottom: 150px;
+  }
+
+  .message-href {
+    color: black;
+    text-decoration: none;
+  }
+
+  .message-href:hover {
+    color: blue;
+    text-decoration: underline blue;
+  }
+
+  .customize-image-text2 {
+    background-color: rgba(200, 200, 200, 0.8);
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 10px 10px;
+    padding-top: 2px;
+    padding-bottom: 1px;
+    color: black;
+  }
+
+  .carousel-caption,
+  .carousel-indicators {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  .carousel:hover .carousel-caption,
+  .carousel:hover .carousel-indicators {
+    opacity: 1;
+  }
+
+  .card-images {
+    max-width: 500px;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .news-card {
+    width: 800px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 40px;
+  }
+  .card-width {
+    max-width: 500px;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .centered-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .unfit-image {
+    max-width: 500px;
+    height: 300px;
+  }
+
+  .card-body {
+    padding: 0;
+  }
+
+  .log-in-button {
+    background-color: rgba(0, 0, 255, 0.58);
+    border-radius: 1em;
+    border: 1px solid rgba(0, 0, 255, 0.572);
+    transition: 0.3s ease, border 0.3s ease;
+  }
+
+  .log-in-button:hover {
+    background-color: #2c3e50;
+    border: 1px solid #2c3e50;
+  }
+
+  .wrapper {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #41414145;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .formcontact {
+    display: grid;
+    gap: 10px;
+  }
+
+  body {
+    overflow-y: auto;
+    background-color: #3d3d3d05;
+  }
+
+  .input-box {
+    padding: 8px;
+  }
+
+  .log-in-container {
+    background-color: rgba(128, 128, 128, 0.323);
+    max-width: 500px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+
+  .btn-login {
+    background-color: rgba(0, 0, 255, 0.341);
+    width: 200px;
+    padding: 5px;
+    margin-right: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+
+  .remember-forgot {
+    padding: 20px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  .noacc {
+    padding-top: 20px;
+    padding-bottom: 0;
+    font-size: larger;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .resisnow {
+    padding-top: 0px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  .res-in-container {
+    background-color: rgba(128, 128, 128, 0.323);
+    max-width: 500px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+
+  .btn-resin {
+    background-color: rgba(0, 0, 255, 0.341);
+    width: 200px;
+    padding: 5px;
+  }
+
+  .btn-contact {
+    background-color: rgba(0, 0, 255, 0.341);
+    width: 200px;
+    padding: 5px;
+    font-weight: bold;
+    margin: auto;
+  }
+
+  .register-container {
+    height: 80vh;
+  }
+</style>
